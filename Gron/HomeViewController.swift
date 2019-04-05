@@ -4,6 +4,9 @@ import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var appDescription: UILabel!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "account"), tag: 0)
@@ -11,7 +14,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        welcomeLabel.text = "Bienvenue !"
+        appDescription.text = "Nous savons que changer de système alimentaire peut être quelque chose de compliqué. Grøn va t’aider au quotidien à devenir entièrement végan, en scannant ton alimentation et en te proposant de petits challenges quotidiens. Commence par scanner quelques produits de ton frigo !"
         // Do any additional setup after loading the view.
     }
 

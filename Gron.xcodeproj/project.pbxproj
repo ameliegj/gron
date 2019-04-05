@@ -11,6 +11,9 @@
 		3761CC6522549C56005984BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3761CC6422549C56005984BF /* GoogleService-Info.plist */; };
 		37E35C582253ABAE00C54036 /* RecosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E35C572253ABAE00C54036 /* RecosViewController.swift */; };
 		37E35C5A2253ABB500C54036 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E35C592253ABB500C54036 /* ScanViewController.swift */; };
+		E50969572256C58A002EB00C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50969562256C58A002EB00C /* Product.swift */; };
+		E50969592256C5C8002EB00C /* ProductsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50969582256C5C8002EB00C /* ProductsManager.swift */; };
+		E509695D2256C734002EB00C /* RecipesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E509695C2256C734002EB00C /* RecipesTableCell.swift */; };
 		E5DBEED12255FBA500E33C8E /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBEED02255FBA500E33C8E /* ProductViewController.swift */; };
 		F4443AE01DF2DFDA00800C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4443ADF1DF2DFDA00800C92 /* AppDelegate.swift */; };
 		F4443AE51DF2DFDA00800C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4443AE31DF2DFDA00800C92 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 		8A2BF32C83D2FE7203A60773 /* Pods-Gron.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gron.release.xcconfig"; path = "Target Support Files/Pods-Gron/Pods-Gron.release.xcconfig"; sourceTree = "<group>"; };
 		BC292E4B8899BC5FB29F29C9 /* Pods_Gron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF307BC61CFB3D3C6C2BAD15 /* Pods-Gron.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gron.debug.xcconfig"; path = "Target Support Files/Pods-Gron/Pods-Gron.debug.xcconfig"; sourceTree = "<group>"; };
+		E50969562256C58A002EB00C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		E50969582256C5C8002EB00C /* ProductsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsManager.swift; sourceTree = "<group>"; };
+		E509695C2256C734002EB00C /* RecipesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableCell.swift; sourceTree = "<group>"; };
 		E5DBEED02255FBA500E33C8E /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		F4443ADC1DF2DFDA00800C92 /* Gron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4443ADF1DF2DFDA00800C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +103,6 @@
 				F4443AF21DF2E34F00800C92 /* HomeViewController.swift */,
 				F4443AF31DF2E34F00800C92 /* LoginViewController.swift */,
 				F4443AF41DF2E34F00800C92 /* ResetPasswordViewController.swift */,
-				37E35C572253ABAE00C54036 /* RecosViewController.swift */,
 				F4443AE61DF2DFDA00800C92 /* Assets.xcassets */,
 				F4443AE81DF2DFDA00800C92 /* LaunchScreen.storyboard */,
 				3761CC6422549C56005984BF /* GoogleService-Info.plist */,
@@ -105,6 +110,10 @@
 				F4443AE31DF2DFDA00800C92 /* Main.storyboard */,
 				37E35C592253ABB500C54036 /* ScanViewController.swift */,
 				E5DBEED02255FBA500E33C8E /* ProductViewController.swift */,
+				37E35C572253ABAE00C54036 /* RecosViewController.swift */,
+				E50969562256C58A002EB00C /* Product.swift */,
+				E50969582256C5C8002EB00C /* ProductsManager.swift */,
+				E509695C2256C734002EB00C /* RecipesTableCell.swift */,
 			);
 			path = Gron;
 			sourceTree = "<group>";
@@ -192,6 +201,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Gron/Pods-Gron-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -202,6 +212,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -241,11 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50969572256C58A002EB00C /* Product.swift in Sources */,
 				37E35C582253ABAE00C54036 /* RecosViewController.swift in Sources */,
 				F4443AF71DF2E34F00800C92 /* LoginViewController.swift in Sources */,
 				F4443AF51DF2E34F00800C92 /* SignUpViewController.swift in Sources */,
 				F4443AF81DF2E34F00800C92 /* ResetPasswordViewController.swift in Sources */,
+				E50969592256C5C8002EB00C /* ProductsManager.swift in Sources */,
 				F4443AE01DF2DFDA00800C92 /* AppDelegate.swift in Sources */,
+				E509695D2256C734002EB00C /* RecipesTableCell.swift in Sources */,
 				E5DBEED12255FBA500E33C8E /* ProductViewController.swift in Sources */,
 				F4443AF61DF2E34F00800C92 /* HomeViewController.swift in Sources */,
 				37E35C5A2253ABB500C54036 /* ScanViewController.swift in Sources */,

@@ -9,7 +9,8 @@ target 'Gron' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'BarcodeScanner'
-  pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
   
 end

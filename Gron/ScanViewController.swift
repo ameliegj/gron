@@ -63,13 +63,6 @@ extension ScanViewController: BarcodeScannerCodeDelegate {
         print("Barcode Data: \(code)")
         print("Symbology Type: \(type)")
         
-//        //display ProductViewController
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ProductViewController") as! ProductViewController
-//        self.navigationController?.pushViewController(nextViewController, animated: true)
-//        controller.dismiss(animated: true, completion: nil)
-//        print("dismiss")
-//        self.tabBarController?.selectedIndex = 0
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let productViewController = storyBoard.instantiateViewController(withIdentifier: "product") as! ProductViewController
         self.present(productViewController, animated: true, completion: nil)
@@ -78,7 +71,6 @@ extension ScanViewController: BarcodeScannerCodeDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             controller.resetWithError()
         }
-        
         
     }
 }
@@ -97,23 +89,3 @@ extension ScanViewController: BarcodeScannerDismissalDelegate {
         self.tabBarController?.selectedIndex = 0
     }
 }
-
-
-
-
-//                func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
-//                    print("oui")
-//                    controller.dismiss(animated: true, completion: nil)
-//
-//                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ProductViewController") as! ProductViewController
-////
-//                    print(nextViewController)
-//
-//                    print("dismiss")
-//                    self.tabBarController?.selectedIndex = 0
-
-//                    self.navigationController?.pushViewController(nextViewController, animated: true)
-
-//                }
-
